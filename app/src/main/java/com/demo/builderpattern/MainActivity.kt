@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.demo.builderpattern.builder.FoodOrder
+import com.demo.builderpattern.singletone.Singleton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +18,12 @@ class MainActivity : AppCompatActivity() {
             .build()
 
 
-        Toast.makeText(this,foodOrder.bread,Toast.LENGTH_LONG).show()
+        Toast.makeText(this, foodOrder.bread, Toast.LENGTH_LONG).show()
+
+
+        //
+        val singleton: Singleton = Singleton.getInstance()
+
+
     }
 }
